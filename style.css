@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile AI Interface</title>
+    <style>
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body { background-color: #0d0d0d; color: white; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; padding-bottom: 70px; }
+        
+        /* Top Header */
+        header { padding: 15px; display: flex; align-items: center; gap: 10px; position: sticky; top: 0; background: #0d0d0d; z-index: 10; }
+        .profile-pic { width: 35px; height: 35px; border-radius: 50%; background: #333; }
+        .search-container { flex-grow: 1; position: relative; }
+        .search-container input { width: 100%; background: #1a1a1a; border: none; padding: 10px 40px; border-radius: 20px; color: white; }
+
+        /* Hero Card */
+        .hero-banner { margin: 10px 15px; padding: 20px; background: linear-gradient(135deg, #1e1e3f, #0d0d0d); border-radius: 15px; border: 1px solid #222; }
+        .hero-banner h2 { font-size: 1.1rem; margin-bottom: 5px; }
+        .hero-banner p { font-size: 0.8rem; color: #aaa; margin-bottom: 15px; }
+
+        /* Tabs */
+        .tabs { display: flex; overflow-x: auto; padding: 10px 15px; gap: 10px; white-space: nowrap; }
+        .tab { padding: 8px 16px; background: #222; border-radius: 20px; font-size: 0.9rem; }
+        .tab.active { background: white; color: black; }
+
+        /* Mobile Grid */
+        .character-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 10px 15px; }
+        .character-card { background: #1a1a1a; border-radius: 12px; overflow: hidden; position: relative; aspect-ratio: 0.8 / 1; }
+        .card-content { position: absolute; bottom: 0; width: 100%; padding: 10px; background: linear-gradient(transparent, rgba(0,0,0,0.9)); }
+        .card-name { font-weight: bold; font-size: 0.9rem; }
+        .card-desc { font-size: 0.7rem; color: #ccc; margin-top: 4px; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; overflow: hidden; }
+
+        /* Bottom Nav */
+        .bottom-nav { position: fixed; bottom: 0; width: 100%; height: 60px; background: #0d0d0d; border-top: 1px solid #222; display: flex; justify-content: space-around; align-items: center; }
+        .nav-item { color: white; font-size: 1.2rem; }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="profile-pic"></div>
+        <div class="search-container">
+            <input type="text" placeholder="Search">
+        </div>
+        <div class="icon">🌐</div>
+    </header>
+
+    <div class="hero-banner">
+        <h2>Meet M2-Her. Built to Understand.</h2>
+        <p>Characters that remember. Stories that evolve.</p>
+        <div class="search-container">
+            <input type="text" placeholder="Chat with Elara...">
+        </div>
+    </div>
+
+    <div class="tabs">
+        <div class="tab active">Featured</div>
+        <div class="tab">For You</div>
+        <div class="tab">Play & Fun</div>
+        <div class="tab">Helper</div>
+        <div class="tab">Original</div>
+    </div>
+
+    <div class="character-grid">
+        <div class="character-card">
+            <div class="card-content">
+                <div class="card-name">Gamer BF Nathan</div>
+                <div class="card-desc">Nathan is a 23-year-old software engineer who...</div>
+            </div>
+        </div>
+        <div class="character-card">
+            <div class="card-content">
+                <div class="card-name">Poet Writer</div>
+                <div class="card-desc">Introducing Poet Writer, your gateway to...</div>
+            </div>
+        </div>
+    </div>
+
+    <nav class="bottom-nav">
+        <div class="nav-item">🏠</div>
+        <div class="nav-item">➕</div>
+        <div class="nav-item">💬</div>
+        <div class="nav-item">✨</div>
+    </nav>
+
+</body>
+</html>
